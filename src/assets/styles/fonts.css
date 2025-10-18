@@ -25,20 +25,23 @@
 @font-face {
     font-family: "Inter";
     src: local('Inter'), local('Inter-Thin'), local('Inter Thin'),
-         url("/static/fonts/Inter_18pt-Thin.ttf") format("truetype");
-    font-weight: 900;
+         url("/static/fonts/Inter_18pt-Thin.ttf") format("truetype"),
+         url("/static/fonts/Inter-ThinBETA.woff2") format("woff");
+    font-weight: 100;
 }
 
 @font-face {
     font-family: "Inter";
     src: local('Inter'), local('Inter-SemiBold Italic'), local('Inter SemiBold Italic'),
-         url("/static/fonts/Inter_18pt-SemiBoldItalic.ttf") format("truetype");
-    font-weight: 900;
+         url("/static/fonts/Inter_18pt-SemiBoldItalic.ttf") format("truetype"),
+         url("/static/fonts/Inter-SemiBoldItalic.woff2") format("woff");
+    font-weight: 600;
 }
 
 @font-face {
     font-family: "Inter";
     src: local('Inter'), local('Inter-Black'), local('Inter Black'),
-         url("/static/fonts/Inter_18pt-Black.ttf") format("truetype");
+         url("/static/fonts/Inter_18pt-Black.ttf") format("truetype"),
+         url("/static/fonts/Inter-Black.woff2") format("woff");
     font-weight: 900;
 }
