@@ -5,43 +5,244 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Главная</title>
-    <link rel="stylesheet" href="/src/assets/styles/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/index.css">
 </head>
 <body>
-    <header>
-        <img src="assets/img/logo.jpg" width="200">
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-        <nav class="breadcrumbs">
+    <header class="site-header">
+        <h3 class="header-title">IT WEBSITE</h3>
+        <nav class="navigation">
             <ul>
-                <li><a href="#">Раз</a></li>
-                <li><a href="#">Два</a></li>
-                <li><a href="#">Три</a></li>
-                <li><a href="#">Четыре</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Media</a></li>
+                <li><a href="#">Cases</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contacts</a></li>
             </ul>
         </nav>
     </header>
-    <h1 class="h1">Корм для собак</h1>
-    <p class="paragraph">Наш корм для собак является источником различных питательных веществ.</p>
-    <h3 class="h3">Гипоаллергенный корм</h3>
-    <h4 class="h4">Корм для собак с индейкой</h4>
-    <p class="paragraph">Индейка является гипоаллергенным мясом для животных.</p>
-    <h3 class="h3">Корм с рыбой</h3>
-    <p class="paragraph">Рыба является источником полезных жиров.</p>
     <hr>
-    <footer>
-        <h3 class="h3">Корм для собак</h3>
-        <p class="paragraph">Вся продукция проходит проверку.</p>
-        <hr>
-        <ul>
-            <li>Тюменская область.</li>
-            <li>89123123123</li>
-            <li>123@gmail.com</li>
-        </ul>
-        <p class="paragraph">Все права защищены.</p>
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Development of mobile applications and web services of any complexity</h2>
+            <p>We create mobile aplications...</p>
+        </div>
+        <div class="hero-form">
+            <h5>Leave your contacts and we will call you back...</h5>
+            <form>
+                <label><input type="tel" placeholder="+7 (111) 111-11-11">Phone number</label>
+                <label><input type="text" placeholder="Иван Иванов">Full name</label>
+                <button type="submit">Get consultation</button>
+            </form>
+        </div>
+        <img src="">
+        <img src="">
+    </section>
+    <hr>
+    <section class="development-cycle">
+        <div class="cycle-left">
+            <h2>Full development cycle</h2>
+            <p>We use proven technologies</p>
+            <h5>Web</h5>
+            <p>PHP...</p>
+            <h5>Mobile</h5>
+            <p>Swift...</p>
+        </div>
+        <aside class="cycle-right">
+            <ul>
+                <li><a href="#">iOS development</a></li>
+                <li><a href="#">Android development</a></li>
+                <li><a href="#">Web development</a></li>
+                <li><a href="#">UI/UX Design</a></li>
+                <li><a href="#">Testing</a></li>
+                <li><a href="#">Launch</a></li>
+                <li><a href="#">IT consulting</a></li>
+            </ul>
+        </aside>
+    </section>
+    <hr>
+    <section class="projects-industries">
+        <h2 >Developed more than 100 projects in 15 industries</h2>
+        <div class="industry-container">
+            <ul>
+                <li class="industry-element"><img src="">Social media</li>
+                <li class="industry-element"><img src="">Fitness and sport</li>
+                <li class="industry-element"><img src="">Bank</li>
+                <li class="industry-element"><img src="">Construction</li>
+                <li class="industry-element"><img src="">Game projects</li>
+            </ul>
+            <ul>
+                <li class="industry-element"><img src="">Education</li>
+                <li class="industry-element"><img src="">Auto, transport</li>
+                <li class="industry-element"><img src="">Medicine, health</li>
+                <li class="industry-element"><img src="">Restaurants, food delivery</li>
+                <li class="industry-element"><img src="">Marketplaces</li>
+            </ul>
+            <ul>
+                <li class="industry-element"><img src="">AR technology</li>
+                <li class="industry-element"><img src="">TV series</li>
+                <li class="industry-element"><img src="">Startups</li>
+                <li class="industry-element"><img src="">Religion</li>
+                <li class="industry-element"><img src="">Online cources</li>
+            </ul>
+        </div>
+    </section>
+    <hr>
+    <section class="projects-proud">
+        <h2>Projects we are proud of</h2>
+        <p>Our software...</p>
+        <div class="projects-list">
+            <ul>
+                <li class="project-title"><a href="#">I-teka</a></li>
+                <li class="project-title"><a href="#">Dauletten</a></li>
+                <li class="project-title"><a href="#">Guru Bosch</a></li>
+                <li class="project-title"><a href="#">Santo</a></li>
+                <li class="project-title"><a href="#">Home Credit Bank</a></li>
+                <li class="project-title"><a href="#">BI Partners</a></li>
+                <li class="project-title"><a href="#">Europharma</a></li>
+                <button>View 100 more projects</button>
+            </ul>
+        </div>
+        <article class="project-card">
+            <h2>I-teka</h2>
+            <p>The application is...</p>
+            <p>Business analysis..</p>
+            <img src=""><p>Kazakhstan</p>
+            <img src=""><p>Medicine</p>
+            <h5>400%</h5>
+            <p>User Growth</p>
+            <h5>+200 000</h5>
+            <p>Active users</p>
+            <button>App Store</button>
+            <button>Google Play</button>
+        </article>
+        <img src="">
+    </section>
+    <hr>
+    <section class="discuss-project">
+        <div class="discuss-left">
+            <h2>Let's discuss your project</h2>
+            <p>Let's figure out...</p>
+        </div>
+        <form class="discuss-form">
+            <label><input type="tel" placeholder="+7 (702) 517-11-98">Best phone number</label>
+            <label><input type="text" placeholder="Иван Иванов">Full name</label>
+            <button type="submit">Discuss the project</button>
+        </form>
+    </section>
+    <hr>
+    <section class="development-stages">
+        <h2>Application Development Stages</h2>
+        <article class="stage-card">
+            <img src="">
+            <h5>Analysis</h5>
+            <p>We write...</p>
+        </article>
+        <article class="stage-card">
+            <img src="">
+            <h5>Design</h5>
+            <p>We adapt...</p>
+        </article>
+        <article class="stage-card">
+            <img src="">
+            <h5>Development</h5>
+            <p>We create...</p>
+        </article>
+        <article class="stage-card">
+            <img src="">
+            <h5>Testing</h5>
+            <p>We carry out...</p>
+        </article>
+        <article class="stage-card">
+            <img src="">
+            <h5>Launching</h5>                
+            <p>We design...</p>
+        </article>
+        <article class="stage-card">
+            <img src="">
+            <h5>Support</h5>
+            <p>We monitor...</p>
+        </article>
+    </section>
+    <hr>
+    <section class="our-team">
+        <div class="team-stats">
+            <h2>Our team</h2>
+            <p>Thousand is a...</p>
+            <div>
+                <h3>28</h3>
+                <p>team members</p>
+            </div>
+            <div>
+                <h3>+100</h3>
+                <p>projects</p>
+            </div>
+            <div>
+                <h3>7 years</h3>
+                <p>in IT sphere</p>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="get-book">
+        <h2>Get the book for free by leaving your contacts.</h2>
+            <form class="book-form">
+                <label><input type="tel" placeholder="+7 (111) 111-11-11">Phone number</label>
+                <input type="text" placeholder="Your full name">
+                <label><input type="email" placeholder="mail@mail.com">email</label>
+                <button type="submit">Send me ebook to my email</button>
+            </form>
+        <img src="">
+    </section>
+    <hr>
+    <section class="faq">
+        <h2>FAQ</h2>
+        <div class="faq-container">
+            <article class="faq-item">
+                <h3>What is the cost of a mobile application?</h3>
+                <p>The cost is...</p>
+            </article>
+            <article class="faq-item">
+                <h3>Do you provide a guarantee for the application?</h3>
+                <p>Yes, we provide...</p>
+            </article>
+            <article class="faq-item">
+                <h3>How long will development take?</h3>
+                <p>Development terms directly depend on...</p>
+                <p>Average development...</p>
+            </article>
+            <article class="faq-item">
+                <h3>I will not tell my idea, do you guarantee confidentiality?</h3>
+                <p>Yes, we guarantee...</p>
+            </article>
+        </div>
+    </section>
+    <hr>
+    <footer class="site-footer">
+        <h2>IT WEBSITE</h2>
+        <div class="footer-container">
+            <div class="footer-element">
+                <img src="">
+                <p>Contact nums</p>
+                <p>+7 (778) 395 90 26</p>
+            </div>
+            <div class="footer-element">
+                <img src="">
+                <p>Post</p>
+                <p>mail@mail.com</p>
+            </div>
+            <div class="footer-element">
+                <img src="">
+                <p>Adress</p>
+                <p>City city, street st. 90</p>
+            </div>
+            <div class="footer-element">
+                <img src="">
+                <p>Leave a request</p>
+                <p><a href="#">Leave a request</a></p>
+            </div>
+        </div>
+        <p><img src="">We work throughout world</p>
     </footer>
 </body>
 </html>

@@ -1,1 +1,30 @@
-@import "componets/index.css";
+@import "componets/fonts.css";
+
+.site-header {
+    width: 1124;
+    height: 56;
+    top: 24px;
+    left: 108px;
+    opacity: 1;
+    border-radius: 12px;
+    padding-top: 16px;
+    padding-right: 24px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    gap: 80px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+}
+
+.header-title{
+    width: 120;
+    height: 24;
+    opacity: 1;
+    font-family: Inter;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: -0.15px;
+    color: rgba(45, 102, 238, 1);
+}
