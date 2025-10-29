@@ -45,3 +45,10 @@
          url("/src/assets/fonts/Inter-Black.woff2") format("woff");
     font-weight: 900;
 }
+
+@font-face {
+    font-family: "SF-Pro-Text";
+    src: local('SF-Pro-Text'), local('SF-Pro-Text-Medium'), local('SF Pro Text'),
+         url("/src/assets/fonts/SFProText-Medium.ttf") format("truetype");
+    font-weight: 500;
+}

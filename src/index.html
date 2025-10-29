@@ -10,9 +10,9 @@
 </head>
 <body>
     <header class="site-header">
-        <h3 class="header-title">IT WEBSITE</h3>
+        <h3>IT WEBSITE</h3>
         <nav class="navigation">
-            <ul>
+            <ul class="navigation-list">
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Media</a></li>
                 <li><a href="#">Cases</a></li>
@@ -20,19 +20,31 @@
                 <li><a href="#">Contacts</a></li>
             </ul>
         </nav>
+        <div class="header-contacts">
+            <img src="assets/img/smartphone_outline_24.png">
+            <p>+7 (111) 111 11 11</p>
+            <p>+7 (111) 111 11 11</p>
+            <img src="assets/img/mail_outline_24.png">
+            <p>itcompany@mail.com</p>
+        </div>
     </header>
-    <hr>
     <section class="hero">
         <div class="hero-text">
-            <h2>Development of mobile applications and web services of any complexity</h2>
-            <p>We create mobile aplications...</p>
+            <h2>Development of <span>mobile applications</span> and <span>web services</span> of any complexity</h2>
+            <p>We create mobile applications for iOS, Android that transfer your business to mobile applications of your customers' devices</p>
         </div>
         <div class="hero-form">
-            <h5>Leave your contacts and we will call you back...</h5>
+            <h5>Leave your contacts and we will call you back within 30 minutes</h5>
             <form>
-                <label><input type="tel" placeholder="+7 (111) 111-11-11">Phone number</label>
-                <label><input type="text" placeholder="Иван Иванов">Full name</label>
-                <button type="submit">Get consultation</button>
+                <div class="form-group">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" placeholder="+7 (111) 111-11-11">
+                </div>
+                <div class="form-group">
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" placeholder="Иван Иванов">
+                </div>
+                <button type="submit" class="hero-form-button">Get consultation</button>
             </form>
         </div>
         <img src="">
