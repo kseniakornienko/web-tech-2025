@@ -3,10 +3,11 @@
     flex-direction: column;
     align-items: center;
     margin-top: auto;
+    margin-bottom: 60px;
     justify-content: space-between;
     justify-self: center;
     width: 1224px;
-    height: 222px;
+    height: 182px;
     top: 5754px;
     left: 108px;
     gap: 40px;
