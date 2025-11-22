@@ -1,56 +1,63 @@
-.hero{
+.hero {
     background: rgba(242, 244, 247, 1);
     height: 900px;
     margin: 0;
-    padding: 0;
-    position: relative;
+    padding: 0 108px 0 108px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: 
+        "text image"
+        "form image"
+        ". image";
+    align-items: start;
+    gap: 0;
+    overflow: hidden;
 }
 
-.hero-text{
-    position: absolute;
+.hero-text {
+    grid-area: text;
+    align-self: end;
     width: 600px;
-    top: 160px;
-    left: 108px;
+    margin-top: 160px;
     gap: 24px;
-    z-index: 1;
 }
 
-.hero-text h2{
+.hero-text h2 {
     font-family: "Inter", sans-serif;
     font-weight: 700;
     font-size: 36px;
     margin-top: 0;
+    margin-bottom: 24px;
 }
 
-.hero-text span{
+.hero-text span {
     color: rgba(45, 102, 238, 1);
 }
 
-.hero-text p{
+.hero-text p {
     font-family: "SF-Pro-Text";
     font-weight: 500;
     font-size: 15px;
+    margin: 0;
 }
 
-.hero-form{
-    position: absolute;
+.hero-form {
+    grid-area: form;
     display: flex;
     flex-direction: column;
     width: 676px;
     height: 186px;
-    top: 430px;
-    left: 108px;
+    margin-top: 46px;
     gap: 32px;
     border-radius: 12px;
-    padding-top: 24px;
-    padding-left: 24px;
+    padding: 24px;
     background: rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16);
-    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
-    z-index: 1;
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16), 
+                0px 0px 2px 0px rgba(0, 0, 0, 0.08);
 }
 
-.hero-form h5{
+.hero-form h5 {
     width: 600px;
     margin: 0;
     font-family: "Inter";
@@ -61,7 +68,7 @@
     color: rgba(16, 24, 40, 1);
 }
 
-.hero-form form{
+.hero-form form {
     display: flex;
     flex-direction: row;
     width: 628px; 
@@ -69,21 +76,23 @@
     gap: 24px;
 }
 
-.form-group{
+.form-group {
     width: 224px;
     height: 54px;
     gap: 8px;
     font-family: "SF-Pro-Text";
     font-weight: 500;
+    display: flex;
+    flex-direction: column;
 }
 
-.form-group label{
+.form-group label {
     color: rgba(102, 112, 133, 1);
     font-size: 13px;
     line-height: 16px;
 }
 
-.form-group input{
+.form-group input {
     height: 38px;
     color: rgba(16, 24, 40, 1);
     font-family: "SF-Pro-Text";
@@ -93,16 +102,13 @@
     padding: 0;
 }
 
-.hero-form-button{
+.hero-form-button {
     text-align: left;
     width: 132px;
     height: 58px;
     gap: 8px;
     border-radius: 8px;
-    padding-top: 11px;
-    padding-right: 24px;
-    padding-bottom: 11px;
-    padding-left: 24px;
+    padding: 11px 24px;
     background: rgba(45, 102, 238, 1);
     font-family: "SF-Pro-Text";
     font-weight: 500;
@@ -113,9 +119,134 @@
     border: none;
 }
 
-.hero img{
-    position: absolute;
-    right: 0;
+.group {
+    grid-area: image;
+    align-self: center;
     border-radius: 24px;
-    z-index: 0;
+    grid-column: 2 / span 2;
+    margin-left: -150px;
+    margin-right: -110px;
+}
+
+.group-extended {
+    display: none;
+}
+
+.group-more-extended {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .hero {
+        max-width: 768px;
+        height: 762px;
+        padding: 0 32px;
+        grid-template-columns: 1fr 0px;
+    }
+
+    .hero-text {
+        width: 383px;
+        height: 204px;
+        gap: 24px;
+        margin-top: 138px;
+        margin-left: 0;
+    }
+
+    .hero-text h2 {
+        font-size: 28px;
+        line-height: 144%;
+        letter-spacing: 0.33px;
+    }
+
+    .hero-form {
+        width: 322px;
+        height: 296px;
+        border-radius: 12px;
+        gap: 32px;
+        padding: 32px;
+        margin-top: 32px;
+        margin-left: 0;
+    }
+    
+    .hero-form h5{
+        font-size: 16px;
+        width: 295px;
+    }
+
+    .hero-form form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .hero-form-button {
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .group {
+        display: none;
+    }
+
+    .group-extended {
+        display: block;
+        grid-area: image;
+        align-self: center;
+        border-radius: 24px;
+        grid-column: 2 / span 2;
+        margin-left: -445px;
+        height: auto;
+    }
+
+    .group-more-extended {
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {
+    .hero {
+        max-width: 425px;
+        height: 1267px;
+        padding: 0 32px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+            "text"
+            "image"
+            "form";
+        gap: 32px;
+        justify-items: start;
+    }
+
+    .hero-text {
+        margin-top: 118px;
+    }
+
+    .group-extended {
+        display: none;
+    }
+
+    .group-more-extended {
+        display: block;
+        grid-area: image;
+        margin-left: 40px;
+        margin-top: -40px;
+        z-index: 1;
+    }
+
+    .hero-form {
+        grid-area: form;
+        margin-top: -760px;
+        z-index: 2;
+        position: relative;
+    }
 }

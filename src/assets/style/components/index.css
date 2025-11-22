@@ -3,3 +3,24 @@
 @import "footer.css";
 @import "hero.css";
 @import "development_cycle.css";
+
+body {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+.site-header,
+.hero,
+.development-cycle,
+.projects-industries,
+.projects-proud,
+.discuss-project,
+.development-stages,
+.our-team,
+.get-book,
+.faq,
+.site-footer {
+    grid-column: 1;
+}

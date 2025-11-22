@@ -4,7 +4,7 @@
     left: 108px;
     display: flex;
     flex-direction: row;
-    padding-right: 24px;
+    padding-right: 48px;
     padding-left: 24px;
     width: 1124px;
     height: 56px;
@@ -79,7 +79,6 @@
 @media (max-width: 768px) {
     .site-header {
         width: 100%;
-        max-width: 768px;
         height: 90px;
         top: 16px;
         border-radius: 12px;
@@ -127,50 +126,16 @@
 
 @media (max-width: 425px) {
     .site-header {
-        width: 100%;
-        max-width: 425px;
-        height: 90px;
-        top: 16px;
-        border-radius: 12px;
-        left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         padding: 0 16px;
-        gap: 0;
-    }
-    
-    .navigation {
-        display: none;
-        order: 4;
-    }
-
-    .header-contacts-phone,
-    .header-contacts-mail {
-        display: none;
     }
 
     .site-header-group {
         display: block;
-        width: 59px;
-        height: 40px;
-        order: 1;
+        width: 40px;
+        height: 20px;
     } 
 
-    .site-header h3 {
-        order: 2;
-        position: static;
-        width: auto;
-        left: auto;
-        margin: 0;
-        text-align: center;
-        flex: 1;
-    }
-
-    .header-contacts {
-        order: 3;
-        width: 59px;
-        display: flex;
-        justify-content: flex-end;
+    .header-contacts-mail {
+        display: none;
     }
 }
