@@ -1,9 +1,9 @@
 .hero{
     background: rgba(242, 244, 247, 1);
     height: 900px;
-    height: 900px;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 .hero-text{

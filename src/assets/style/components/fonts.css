@@ -52,3 +52,17 @@
          url("/src/assets/fonts/SFProText-Medium.ttf") format("truetype");
     font-weight: 500;
 }
+
+@font-face {
+    font-family: "SF-Pro-Display";
+    src: local('SF-Pro-Display'), local('SF-Pro-Display-SemiBold'), local('SF Pro Display'),
+         url("/src/assets/fonts/SF-Pro-Display-Semibold.otf") format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "SF-Pro-Text";
+    src: local('SF-Pro-Text'), local('SF-Pro-Text-Light'), local('SF Pro Text'),
+         url("/src/assets/fonts/SFProText-Light.ttf") format("truetype");
+    font-weight: 400;
+}

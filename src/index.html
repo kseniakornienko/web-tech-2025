@@ -10,6 +10,7 @@
 </head>
 <body>
     <header class="site-header">
+        <img src="assets/img/Group 625890.png" class="site-header-group">
         <h3>IT WEBSITE</h3>
         <nav class="navigation">
             <ul class="navigation-list">
@@ -21,11 +22,15 @@
             </ul>
         </nav>
         <div class="header-contacts">
-            <img src="assets/img/smartphone_outline_24.png">
-            <p>+7 (111) 111 11 11</p>
-            <p>+7 (111) 111 11 11</p>
-            <img src="assets/img/mail_outline_24.png">
-            <p>itcompany@mail.com</p>
+            <div class="header-contacts-phone">
+                <img src="assets/img/smartphone_outline_24.png">
+                <p>+7 (111) 111 11 11</p>
+                <p>+7 (111) 111 11 11</p>
+            </div>
+            <div class="header-contacts-mail">
+                <img src="assets/img/mail_outline_24.png">
+                <p>itcompany@mail.com</p>
+            </div>
         </div>
     </header>
     <section class="hero">
@@ -49,25 +54,30 @@
         </div>
         <img src="assets/img/Group 1.png">
     </section>
-    <hr>
     <section class="development-cycle">
-        <div class="cycle-left">
+        <div class="cycle-header">
             <h2>Full development cycle</h2>
             <p>We use proven technologies</p>
-            <h5>Web</h5>
-            <p>PHP...</p>
-            <h5>Mobile</h5>
-            <p>Swift...</p>
+        </div>
+        <div class="cycle-left">
+            <div class="cycle-left-web">
+                <h5>Web</h5>
+                <p>PHP <span class="blue-slash">/</span> Javascript <span class="blue-slash">/</span> Node.JS <span class="blue-slash">/</span> Web Socket <span class="blue-slash">/</span> Socket.io <span class="blue-slash">/</span> Vue.js<span class="blue-slash">/</span><br> Nuxt <span class="blue-slash">/</span> MySQL <span class="blue-slash">/</span> Laravel <span class="blue-slash">/</span> GO lang <span class="blue-slash">/</span> django <span class="blue-slash">/</span> Python</p>
+            </div>
+            <div class="cycle-left-mobile">
+                <h5>Mobile</h5>
+                <p>Swift <span class="blue-slash">/</span> Kotlin <span class="blue-slash">/</span> Alamofire <span class="blue-slash">/</span> Firebase <span class="blue-slash">/</span> CoreData <span class="blue-slash">/</span> Room <span class="blue-slash">/</span> Realm <span class="blue-slash">/</span><br> Coroutine <span class="blue-slash">/</span> RxJava <span class="blue-slash">/</span> RxSwift <span class="blue-slash">/</span> Unit Test <span class="blue-slash">/</span> Navigation</p>
+            </div>
         </div>
         <aside class="cycle-right">
             <ul>
-                <li><a href="#">iOS development</a></li>
-                <li><a href="#">Android development</a></li>
-                <li><a href="#">Web development</a></li>
-                <li><a href="#">UI/UX Design</a></li>
-                <li><a href="#">Testing</a></li>
-                <li><a href="#">Launch</a></li>
-                <li><a href="#">IT consulting</a></li>
+                <li><a href="#">iOS development <span class="blue-arrow">></span></a></li>
+                <li><a href="#">Android development <span class="blue-arrow">></span></a></li>
+                <li><a href="#">Web development <span class="blue-arrow">></span></a></li>
+                <li><a href="#">UI/UX Design <span class="blue-arrow">></span></a></li>
+                <li><a href="#">Testing <span class="blue-arrow">></span></a></li>
+                <li><a href="#">Launch <span class="blue-arrow">></span></a></li>
+                <li><a href="#">IT consulting <span class="blue-arrow">></span></a></li>
             </ul>
         </aside>
     </section>
