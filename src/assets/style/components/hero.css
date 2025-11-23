@@ -138,15 +138,11 @@
 
 @media (max-width: 768px) {
 
-    body {
-        overflow-x: hidden;
-    }
-
     .hero {
         max-width: 768px;
         height: 762px;
         padding: 0 32px;
-        grid-template-columns: 1fr 0px;
+        grid-template-columns: 1fr;
     }
 
     .hero-text {
@@ -189,8 +185,11 @@
     }
 
     .hero-form-button {
-        width: 100%;
+        width: 155px;
+        height: 40px;
         margin-top: 16px;
+        text-align: center;
+        white-space: nowrap;
     }
 
     .group {
@@ -213,10 +212,11 @@
 }
 
 @media (max-width: 425px) {
+    
     .hero {
         max-width: 425px;
         height: 1267px;
-        padding: 0 32px;
+        padding: 0 0 0 16px;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
         grid-template-areas: 
@@ -238,15 +238,15 @@
     .group-more-extended {
         display: block;
         grid-area: image;
-        margin-left: 40px;
-        margin-top: -40px;
+        margin-left: 15px;
+        margin-top: -30px;
         z-index: 1;
     }
 
     .hero-form {
         grid-area: form;
-        margin-top: -760px;
+        margin-top: -380px;
         z-index: 2;
-        position: relative;
+        width: 342px;
     }
 }

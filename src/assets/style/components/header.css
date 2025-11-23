@@ -78,6 +78,7 @@
 
 @media (max-width: 768px) {
     .site-header {
+        max-width: 768px;
         width: 100%;
         height: 90px;
         top: 16px;
@@ -125,7 +126,9 @@
 }
 
 @media (max-width: 425px) {
+    
     .site-header {
+        max-width: 425px;
         padding: 0 16px;
     }
 
