@@ -122,10 +122,8 @@
 .group {
     grid-area: image;
     align-self: center;
-    border-radius: 24px;
-    grid-column: 2 / span 2;
-    margin-left: -150px;
-    margin-right: -110px;
+    justify-self: end;
+    margin-left: -110px;
 }
 
 .group-extended {
@@ -192,22 +190,16 @@
         white-space: nowrap;
     }
 
-    .group {
+    .group,
+    .group-more-extended {
         display: none;
     }
 
     .group-extended {
         display: block;
         grid-area: image;
-        align-self: center;
-        border-radius: 24px;
-        grid-column: 2 / span 2;
-        margin-left: -445px;
-        height: auto;
-    }
-
-    .group-more-extended {
-        display: none;
+        justify-self: end;
+        margin-left: -20px;
     }
 }
 
@@ -231,6 +223,7 @@
         margin-top: 118px;
     }
 
+    .group,
     .group-extended {
         display: none;
     }
