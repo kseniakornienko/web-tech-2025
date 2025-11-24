@@ -147,7 +147,7 @@
     }
 }
 
-@media (max-width: 525px) {
+@media (max-width: 425px) {
     
     .development-cycle {
         grid-template-columns: 1fr;
