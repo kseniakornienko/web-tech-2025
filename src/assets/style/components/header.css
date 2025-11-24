@@ -76,7 +76,7 @@
     width: 142px;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .site-header {
         max-width: 768px;
         width: 100%;
@@ -125,7 +125,7 @@
     }
 }
 
-@media (max-width: 425px) {
+@media screen and (max-width: 425px) {
     
     .site-header {
         max-width: 425px;

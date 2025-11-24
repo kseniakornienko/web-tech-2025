@@ -76,7 +76,7 @@
     margin: 0;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     .site-footer {
         max-width: 768px;
@@ -95,7 +95,7 @@
     }
 }
 
-@media (max-width: 425px) {
+@media screen and (max-width: 425px) {
 
     .site-footer {
         max-width: 425px;
