@@ -727,8 +727,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-flow: column;
-  font-family: "SF-Pro-Text";
-  font-weight: 500;
 }
 
 .industry-element {
@@ -896,6 +894,217 @@
   }
   .industry-container {
     width: 420px;
+  }
+}
+.projects-proud {
+  background: rgb(242, 244, 247);
+  height: auto;
+  padding: 80px 108px;
+}
+
+.projects-header h2,
+.project-card h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+.projects-header p {
+  font-family: "SF-Pro-Text";
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.project-title {
+  font-family: "SF-Pro-Text";
+  font-weight: 400;
+  font-size: 17px;
+  padding-left: 33px;
+}
+
+.project-title a {
+  text-decoration: none;
+  color: rgb(29, 41, 57);
+}
+
+.project-title a:hover {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: rgb(45, 102, 238);
+}
+
+.projects-list {
+  display: flex;
+  flex-flow: row;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.projects-list-container {
+  grid-area: list-button;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "list-button list-button" "card image";
+  align-items: start;
+  gap: 20px;
+}
+
+.project-card {
+  grid-area: card;
+}
+
+.project-image {
+  grid-area: image;
+  width: 100%;
+  height: auto;
+}
+
+.view-more-btn {
+  width: 207px;
+  height: 40px;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 11px 24px;
+  background: rgb(45, 102, 238);
+  font-family: "SF-Pro-Text";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+  color: rgb(255, 255, 255);
+  border: none;
+}
+
+.description {
+  font-family: "SF-Pro-Text";
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+.categories {
+  font-family: "SF-Pro-Text";
+  font-weight: 400;
+  font-size: 17px;
+  color: rgb(71, 84, 103);
+  margin-bottom: 30px;
+}
+
+.categories span {
+  color: rgb(45, 102, 238);
+}
+
+.info {
+  display: flex;
+  flex-flow: row;
+  font-family: "SF-Pro-Text";
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.info-card {
+  display: flex;
+  flex-flow: row;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.info-card img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.users {
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 30px;
+}
+
+.users-count {
+  display: flex;
+  flex-flow: column;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.users-count h5 {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+.users-count p {
+  font-family: "SF-Pro-Text";
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.download {
+  display: flex;
+  flex-flow: row;
+}
+
+.download-image {
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .projects-proud {
+    padding: 40px 20px;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "list-button" "card" "image";
+  }
+  .projects-list-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .projects-list {
+    margin-bottom: 20px;
+    justify-content: flex-start;
+  }
+  .view-more-btn {
+    align-self: flex-end;
+    margin-left: 0;
+  }
+  .projects-header h2,
+  .project-card h2 {
+    font-size: 28px;
+  }
+  .projects-header p,
+  .categories,
+  .project-title,
+  .description,
+  .info-card p {
+    font-size: 14px;
+  }
+  .users-count h5 {
+    font-size: 20px;
+  }
+  .users-count p {
+    font-size: 12px;
+  }
+  .project-image {
+    height: auto;
+    width: 100%;
+    max-width: 369px;
+  }
+  .project-title {
+    padding-left: 20px;
   }
 }
 body {
