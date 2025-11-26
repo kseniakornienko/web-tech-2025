@@ -226,14 +226,21 @@
     }
 
     .group-extended {
-        display: block;
-        grid-area: image;
-        justify-self: end;
-        margin-left: -20px;
+        display: none;
     }
 
     .animated-images {
-        display: none;
+        margin-left: -20px;
+        transform: rotate(-13deg) scale(0.6);
+    }
+
+    .scroll-up, .scroll-down {
+        height: 1500px;
+    }
+
+    .scroll-up {
+        margin-right: -70px;
+        margin-left: -140px;
     }
 }
 
@@ -262,17 +269,31 @@
     }
 
     .group-more-extended {
-        display: block;
-        grid-area: image;
-        margin-left: 15px;
-        margin-top: -30px;
-        z-index: 1;
+        display: none;
     }
 
     .hero-form {
         grid-area: form;
-        margin-top: -380px;
+        margin-top: -1000px;
         z-index: 2;
         width: 342px;
+    }
+
+    .animated-images {
+        display: flex;
+        grid-area: image;
+        margin-top: -500px;
+        z-index: 1;
+        margin-left: 0px;
+        transform: rotate(-13deg) scale(0.5);
+    }
+
+    .scroll-up, .scroll-down {
+        height: 2000px;
+    }
+
+    .scroll-up {
+        margin-right: -70px;
+        margin-left: -140px;
     }
 }
