@@ -168,7 +168,7 @@
 @media screen and (max-width: 768px) {
 
     .hero {
-        max-width: 768px;
+        width: 768px;
         height: 762px;
         padding: 0 32px;
         grid-template-columns: 1fr;
@@ -178,8 +178,6 @@
         width: 383px;
         height: 204px;
         gap: 24px;
-        margin-top: 138px;
-        margin-left: 0;
     }
 
     .hero-text h2 {
@@ -193,9 +191,6 @@
         height: 296px;
         border-radius: 12px;
         gap: 32px;
-        padding: 32px;
-        margin-top: 32px;
-        margin-left: 0;
     }
     
     .hero-form h5{
@@ -209,14 +204,9 @@
         width: 100%;
     }
 
-    .form-group {
-        width: 100%;
-    }
-
     .hero-form-button {
         width: 155px;
         height: 40px;
-        margin-top: 16px;
         text-align: center;
         white-space: nowrap;
     }
@@ -237,17 +227,12 @@
     .scroll-up, .scroll-down {
         height: 1500px;
     }
-
-    .scroll-up {
-        margin-right: -70px;
-        margin-left: -140px;
-    }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 525px) {
     
     .hero {
-        max-width: 425px;
+        width: 425px;
         height: 1267px;
         padding: 0 0 0 16px;
         grid-template-columns: 1fr;
