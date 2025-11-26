@@ -534,6 +534,8 @@
     margin-top: -500px;
     z-index: 1;
     margin-left: 0px;
+    align-self: end;
+    justify-self: end;
     transform: rotate(-13deg) scale(0.5);
   }
   .scroll-up, .scroll-down {
