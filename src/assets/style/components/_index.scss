@@ -1,8 +1,8 @@
-@import "fonts.css";
-@import "header.css";
-@import "footer.css";
-@import "hero.css";
-@import "development_cycle.css";
+@import "_fonts";
+@import "_header"; 
+@import "_footer";
+@import "_hero";
+@import "_development_cycle";
 
 body {
     display: grid;

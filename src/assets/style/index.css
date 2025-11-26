@@ -1,1 +1,713 @@
-@import "components/index.css";
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), local("Inter-Bold"), local("Inter Bold"), url("/src/assets/fonts/Inter-Bold.ttf") format("truetype"), url("/src/assets/fonts/Inter-Bold.woff2") format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), local("Inter-Medium"), local("Inter Medium"), url("/src/assets/fonts/Inter-Medium.ttf") format("truetype"), url("/src/assets/fonts/Inter-Medium.woff2") format("woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), local("Inter-Regular"), local("Inter Regular"), url("/src/assets/fonts/Inter-Regular.ttf") format("truetype"), url("/src/assets/fonts/Inter-Regular.woff2") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), local("Inter-Thin"), local("Inter Thin"), url("/src/assets/fonts/Inter_18pt-Thin.ttf") format("truetype"), url("/src/assets/fonts/Inter-ThinBETA.woff2") format("woff");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), local("Inter-SemiBold Italic"), local("Inter SemiBold Italic"), url("/src/assets/fonts/Inter_18pt-SemiBoldItalic.ttf") format("truetype"), url("/src/assets/fonts/Inter-SemiBoldItalic.woff2") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), local("Inter-Black"), local("Inter Black"), url("/src/assets/fonts/Inter_18pt-Black.ttf") format("truetype"), url("/src/assets/fonts/Inter-Black.woff2") format("woff");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "SF-Pro-Text";
+  src: local("SF-Pro-Text"), local("SF-Pro-Text-Medium"), local("SF Pro Text"), url("/src/assets/fonts/SFProText-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "SF-Pro-Display";
+  src: local("SF-Pro-Display"), local("SF-Pro-Display-SemiBold"), local("SF Pro Display"), url("/src/assets/fonts/SF-Pro-Display-Semibold.otf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "SF-Pro-Text";
+  src: local("SF-Pro-Text"), local("SF-Pro-Text-Light"), local("SF Pro Text"), url("/src/assets/fonts/SFProText-Light.ttf") format("truetype");
+  font-weight: 400;
+}
+.site-header {
+  position: fixed;
+  top: 24px;
+  left: 108px;
+  display: flex;
+  flex-direction: row;
+  padding-right: 48px;
+  padding-left: 24px;
+  width: 1124px;
+  height: 56px;
+  border-radius: 12px;
+  gap: 80px;
+  font-family: "SF-Pro-Text";
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+}
+
+.site-header-group {
+  display: none;
+}
+
+.site-header h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+  color: rgb(45, 102, 238);
+}
+
+.navigation-list {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  width: 324px;
+  height: 18px;
+}
+
+.navigation-list li a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+  color: rgb(16, 24, 40);
+}
+
+.header-contacts {
+  font-weight: 500;
+  width: 472px;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.header-contacts-phone,
+.header-contacts-mail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-contacts img {
+  width: 24px;
+  height: 24px;
+}
+
+.header-contacts p {
+  font-family: "SF-Pro-Text";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+  color: rgb(45, 102, 238);
+  width: 142px;
+}
+
+@media screen and (max-width: 768px) {
+  .site-header {
+    max-width: 768px;
+    width: 100%;
+    height: 90px;
+    top: 16px;
+    border-radius: 12px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    gap: 0;
+  }
+  .navigation {
+    display: none;
+    order: 4;
+  }
+  .header-contacts-phone {
+    display: none;
+  }
+  .site-header-group {
+    display: block;
+    width: 59px;
+    height: 40px;
+    order: 1;
+  }
+  .site-header h3 {
+    order: 2;
+  }
+  .header-contacts {
+    order: 3;
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .header-contacts-mail {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 425px) {
+  .site-header {
+    max-width: 425px;
+    padding: 0 16px;
+  }
+  .site-header-group {
+    display: block;
+    width: 40px;
+    height: 20px;
+  }
+  .header-contacts-mail {
+    display: none;
+  }
+}
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 1224px;
+  margin: 0 auto 50px auto;
+  padding: 24px;
+  border-radius: 12px;
+  font-family: "SF-Pro-Text";
+  font-weight: 500;
+  color: white;
+  background: rgb(16, 24, 40);
+  box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.08), 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+}
+
+.site-footer h2 {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+  margin: 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-element {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 294px;
+  font-family: "SF-Pro-Text";
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.41px;
+}
+
+.footer-element-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-element-title {
+  font-family: "SF-Pro-Text";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+  color: rgb(152, 162, 179);
+  margin: 0;
+}
+
+.footer-element p:last-of-type {
+  margin: 0;
+}
+
+.site-footer-end {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "SF-Pro-Text";
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: -0.08px;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .site-footer {
+    max-width: 768px;
+    justify-content: center;
+    height: 241px;
+    margin-bottom: 0;
+  }
+  .footer-element {
+    width: 176px;
+    font-size: 14px;
+  }
+  .footer-container {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 425px) {
+  .site-footer {
+    max-width: 425px;
+    padding: 24px 16px;
+    margin: 0 auto 0 0px;
+    height: 350px;
+    justify-content: space-evenly;
+  }
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+  }
+  .footer-element {
+    justify-self: center;
+    width: 154px;
+  }
+}
+.hero {
+  background: rgb(242, 244, 247);
+  height: 900px;
+  margin: 0;
+  padding: 0 108px 0 108px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas: "text image" "form image" ". image";
+  align-items: start;
+  gap: 0;
+  overflow: hidden;
+}
+
+.hero-text {
+  grid-area: text;
+  align-self: end;
+  width: 600px;
+  margin-top: 160px;
+  gap: 24px;
+}
+
+.hero-text h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.hero-text span {
+  color: rgb(45, 102, 238);
+}
+
+.hero-text p {
+  font-family: "SF-Pro-Text";
+  font-weight: 500;
+  font-size: 15px;
+  margin: 0;
+}
+
+.hero-form {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  width: 676px;
+  height: 186px;
+  margin-top: 46px;
+  gap: 32px;
+  border-radius: 12px;
+  padding: 24px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16), 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+}
+
+.hero-form h5 {
+  width: 600px;
+  margin: 0;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.38px;
+  color: rgb(16, 24, 40);
+}
+
+.hero-form form {
+  display: flex;
+  flex-direction: row;
+  width: 628px;
+  height: 58px;
+  gap: 24px;
+}
+
+.form-group {
+  width: 224px;
+  height: 54px;
+  gap: 8px;
+  font-family: "SF-Pro-Text";
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: rgb(102, 112, 133);
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.form-group input {
+  height: 38px;
+  color: rgb(16, 24, 40);
+  font-family: "SF-Pro-Text";
+  font-weight: 400;
+  border: none;
+  border-bottom: 0.7px solid rgb(208, 213, 221);
+  padding: 0;
+}
+
+.hero-form-button {
+  text-align: left;
+  width: 132px;
+  height: 58px;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 11px 24px;
+  background: rgb(45, 102, 238);
+  font-family: "SF-Pro-Text";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+  color: rgb(255, 255, 255);
+  border: none;
+}
+
+.group-extended {
+  display: none;
+}
+
+.group-more-extended {
+  display: none;
+}
+
+.animated-images {
+  grid-area: image;
+  display: flex;
+  align-self: center;
+  justify-self: end;
+  transform: rotate(-13deg);
+}
+
+.scroll-up, .scroll-down {
+  overflow: hidden;
+  height: 900px;
+}
+
+.scroll-up {
+  margin-right: -70px;
+}
+
+.scrolling-content {
+  animation: scroll 10s linear infinite;
+}
+
+.scroll-up .scrolling-content {
+  animation-direction: normal;
+}
+
+.scroll-down .scrolling-content {
+  animation-direction: reverse;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    max-width: 768px;
+    height: 762px;
+    padding: 0 32px;
+    grid-template-columns: 1fr;
+  }
+  .hero-text {
+    width: 383px;
+    height: 204px;
+    gap: 24px;
+    margin-top: 138px;
+    margin-left: 0;
+  }
+  .hero-text h2 {
+    font-size: 28px;
+    line-height: 144%;
+    letter-spacing: 0.33px;
+  }
+  .hero-form {
+    width: 322px;
+    height: 296px;
+    border-radius: 12px;
+    gap: 32px;
+    padding: 32px;
+    margin-top: 32px;
+    margin-left: 0;
+  }
+  .hero-form h5 {
+    font-size: 16px;
+    width: 295px;
+  }
+  .hero-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .form-group {
+    width: 100%;
+  }
+  .hero-form-button {
+    width: 155px;
+    height: 40px;
+    margin-top: 16px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .group-more-extended {
+    display: none;
+  }
+  .group-extended {
+    display: block;
+    grid-area: image;
+    justify-self: end;
+    margin-left: -20px;
+  }
+  .animated-images {
+    display: none;
+  }
+}
+@media screen and (max-width: 425px) {
+  .hero {
+    max-width: 425px;
+    height: 1267px;
+    padding: 0 0 0 16px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "text" "image" "form";
+    gap: 32px;
+    justify-items: start;
+  }
+  .hero-text {
+    margin-top: 118px;
+  }
+  .group-extended {
+    display: none;
+  }
+  .group-more-extended {
+    display: block;
+    grid-area: image;
+    margin-left: 15px;
+    margin-top: -30px;
+    z-index: 1;
+  }
+  .hero-form {
+    grid-area: form;
+    margin-top: -380px;
+    z-index: 2;
+    width: 342px;
+  }
+}
+.development-cycle {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "header right" "left right";
+  gap: 40px 80px;
+  padding: 80px 108px;
+  align-items: start;
+}
+
+.cycle-header {
+  grid-area: header right;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.cycle-header h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 144%;
+  letter-spacing: 0.33px;
+  margin: 0 0 8px 0;
+}
+
+.cycle-header p {
+  font-family: "SF-Pro-Text";
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+  margin: 0;
+}
+
+.cycle-left {
+  grid-area: left;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-self: start;
+}
+
+.cycle-left-web,
+.cycle-left-mobile {
+  width: 100%;
+}
+
+.cycle-left-web h5,
+.cycle-left-mobile h5 {
+  font-family: "SF-Pro-Display";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.38px;
+  margin: 0 0 8px 0;
+}
+
+.cycle-left-web p,
+.cycle-left-mobile p {
+  font-family: "SF-Pro-Text";
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.41px;
+  margin: 0;
+}
+
+.blue-arrow,
+.blue-slash {
+  color: rgb(45, 102, 238);
+}
+
+.cycle-right {
+  grid-area: right;
+  width: 300px;
+  align-self: start;
+}
+
+.cycle-right ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cycle-right ul li {
+  padding: 12px 0;
+}
+
+.cycle-right a {
+  text-decoration: none;
+  font-family: "SF-Pro-Text";
+  font-weight: 400;
+  color: rgb(29, 41, 57);
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.38px;
+  display: flex;
+  align-items: center;
+}
+
+.cycle-right a:hover {
+  font-weight: 600;
+}
+
+.cycle-left-br {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .development-cycle {
+    grid-template-columns: 321px auto;
+    grid-template-areas: "header header" "left right";
+    padding: 32px 32px;
+  }
+  .cycle-header {
+    grid-area: header;
+  }
+  .cycle-header h2 {
+    font-size: 28px;
+  }
+  .cycle-left-web p,
+  .cycle-left-mobile p {
+    font-size: 14px;
+  }
+  .cycle-left {
+    display: none;
+  }
+  .cycle-left-br {
+    display: block;
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-self: start;
+  }
+}
+@media screen and (max-width: 425px) {
+  .development-cycle {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "left" "right";
+    padding: 32px 16px;
+  }
+  .cycle-header {
+    grid-area: header;
+  }
+}
+body {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header,
+.hero,
+.development-cycle,
+.projects-industries,
+.projects-proud,
+.discuss-project,
+.development-stages,
+.our-team,
+.get-book,
+.faq,
+.site-footer {
+  grid-column: 1;
+}/*# sourceMappingURL=index.css.map */
