@@ -817,6 +817,7 @@
 
 @media screen and (max-width: 768px) {
   .projects-industries {
+    max-width: 768px;
     padding: 32px 32px;
   }
   .projects-industries h2 {
@@ -888,7 +889,7 @@
     grid-column: 2;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 525px) {
   .industry-element {
     font-size: 14px;
   }
@@ -911,10 +912,14 @@
   margin-bottom: 28px;
 }
 
-.projects-header p {
+.header-description-desktop {
   font-family: "SF-Pro-Text";
   font-weight: 500;
   font-size: 15px;
+}
+
+.header-description-mobile {
+  display: none;
 }
 
 .project-title {
@@ -941,6 +946,7 @@
   margin-top: 40px;
   margin-bottom: 40px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .projects-list-container {
@@ -965,8 +971,8 @@
 
 .project-image {
   grid-area: image;
-  width: 100%;
-  height: auto;
+  width: 600px;
+  height: 326px;
 }
 
 .view-more-btn {
@@ -983,13 +989,17 @@
   letter-spacing: -0.15px;
   color: rgb(255, 255, 255);
   border: none;
+  grid-area: list-button;
+  justify-self: end;
+  align-self: center;
 }
 
-.description {
+.description-desktop {
   font-family: "SF-Pro-Text";
   font-weight: 400;
   font-size: 15px;
   margin-bottom: 40px;
+  width: 600px;
 }
 
 .categories {
@@ -1010,7 +1020,6 @@
   font-family: "SF-Pro-Text";
   font-weight: 400;
   font-size: 15px;
-  margin-bottom: 30px;
 }
 
 .info-card {
@@ -1061,25 +1070,32 @@
   margin-right: 20px;
 }
 
+.description-tablet {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .projects-proud {
-    padding: 40px 20px;
-  }
-  .projects-grid {
-    grid-template-columns: 1fr;
-    grid-template-areas: "list-button" "card" "image";
+    padding: 32px 32px;
+    max-width: 768px;
   }
   .projects-list-container {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
   }
   .projects-list {
-    margin-bottom: 20px;
+    margin-bottom: 0;
     justify-content: flex-start;
+    flex-wrap: wrap;
+    flex: 1;
   }
   .view-more-btn {
-    align-self: flex-end;
-    margin-left: 0;
+    align-self: center;
+    margin-left: 20px;
+    flex-shrink: 0;
   }
   .projects-header h2,
   .project-card h2 {
@@ -1099,12 +1115,67 @@
     font-size: 12px;
   }
   .project-image {
-    height: auto;
-    width: 100%;
-    max-width: 369px;
+    width: 369px;
+    height: 225px;
   }
   .project-title {
     padding-left: 20px;
+    margin-bottom: 10px;
+  }
+  .view-more-btn {
+    grid-area: image;
+    align-self: flex-start;
+  }
+  .project-image {
+    align-self: flex-end;
+    grid-template-rows: image;
+    margin-left: -70px;
+  }
+  .description-tablet {
+    display: block;
+    width: 459px;
+    font-family: "SF-Pro-Text";
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+  .description-desktop {
+    display: none;
+  }
+}
+@media screen and (max-width: 525px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "list-button" "image" "card" "button";
+  }
+  .projects-proud {
+    max-width: 425px;
+  }
+  .header-description-desktop {
+    display: none;
+  }
+  .header-description-mobile {
+    display: block;
+    font-family: "SF-Pro-Text";
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .projects-list-container {
+    width: 390px;
+  }
+  .project-title {
+    padding-left: 0px;
+    padding-right: 33px;
+  }
+  .project-image {
+    grid-area: image;
+    width: 393px;
+    height: 225px;
+    justify-self: center;
+  }
+  .view-more-btn {
+    grid-area: button;
+    justify-self: center;
   }
 }
 body {

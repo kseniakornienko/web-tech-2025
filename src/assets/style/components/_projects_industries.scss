@@ -52,6 +52,7 @@
 @media screen and (max-width: 768px) {
 
     .projects-industries{
+        max-width: 768px;
         padding: 32px 32px;
     }
 
@@ -82,7 +83,7 @@
     .industry-element:nth-child(14) { order: 15; grid-column: 2; }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 525px) {
 
     .industry-element {
         font-size: 14px;
