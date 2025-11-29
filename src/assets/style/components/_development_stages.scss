@@ -1,0 +1,130 @@
+.development-stages{
+    height: auto;
+    padding: 80px 108px;
+    display: flex;
+    flex-direction: column;
+}
+
+.development-stages h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: rgba(16, 24, 40, 1);
+    margin-top: 0;
+}
+
+.development-stages-block {
+    width: 1224px;
+    height: 564px;
+    gap: 440px;
+    display: flex;
+    flex-direction: row;
+}
+
+.stage-card-analysis{
+    width: 392px;
+    height: 192px;
+    gap: 16px;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.08),
+                0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    font-family: "SF-Pro-Text";
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    position: relative;
+}
+
+.stage-card{
+    width: 392px;
+    height: 172px;
+    gap: 16px;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.08),
+                0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    font-family: "SF-Pro-Text";
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    position: relative;
+}
+
+.stage-card-analysis h5,
+.stage-card h5 {
+    font-family: "SF-Pro-Display";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.stage-card-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    height: 48px;
+}
+
+.stage-card-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+
+    .development-stages{
+        max-width: 768px;
+        padding: 32px 32px;
+    }
+
+    .development-stages-block {
+        height: auto;
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .development-stages h2 {
+        font-size: 28px;
+    }
+
+    .stage-card-analysis{
+        width: 673px;
+        height: 172px;
+        margin-bottom: 24px;
+    }
+
+    .stage-card{
+        width: 673px;
+        height: 172px;
+    }
+
+}
+
+@media screen and (max-width: 525px) {
+
+    .development-stages{
+        max-width: 425px;
+        padding: 32px 16px;
+    }
+
+    .stage-card-analysis{
+        width: 393px;
+        height: 217px;
+        margin-bottom: 24px;
+    }
+
+    .stage-card{
+        width: 393px;
+        height: 217px;
+    }
+
+}

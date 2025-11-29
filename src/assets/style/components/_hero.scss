@@ -29,6 +29,7 @@
     font-size: 36px;
     margin-top: 0;
     margin-bottom: 24px;
+    line-height: 144%;
 }
 
 .hero-text span {
@@ -55,9 +56,10 @@
     background: rgba(255, 255, 255, 1);
     box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16), 
                 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
 }
 
-.hero-form h5 {
+.hero-form-header-desktop {
     width: 600px;
     margin: 0;
     font-family: "Inter";
@@ -66,6 +68,10 @@
     line-height: 24px;
     letter-spacing: 0.38px;
     color: rgba(16, 24, 40, 1);
+}
+
+.hero-form-header-tablet {
+    display: none;
 }
 
 .hero-form form {
@@ -132,7 +138,7 @@
     display: flex;
     align-self: center;
     justify-self: end;
-    transform: rotate(-13deg);
+    transform: rotate(-13deg) scale(1.1);
 }
 
 .scroll-up, .scroll-down {
@@ -182,6 +188,10 @@
         margin-left: 0;
     }
 
+    .hero-text p {
+        width: 383px;
+    }
+
     .hero-text h2 {
         font-size: 28px;
         line-height: 144%;
@@ -189,28 +199,34 @@
     }
 
     .hero-form {
-        width: 322px;
-        height: 296px;
+        width: 382px;
+        height: 356px;
         border-radius: 12px;
         gap: 32px;
         padding: 32px;
         margin-top: 32px;
         margin-left: 0;
     }
-    
-    .hero-form h5{
+
+    .hero-form-header-desktop {
+        display: none;
+    }
+
+    .hero-form-header-tablet {
+        display: block;
+        margin: 0;
+        font-family: "Inter";
+        font-weight: 700;
         font-size: 16px;
-        width: 295px;
+        line-height: 24px;
+        letter-spacing: 0.38px;
+        color: rgba(16, 24, 40, 1);
+        box-sizing: border-box;
     }
 
     .hero-form form {
         display: flex;
         flex-direction: column;
-        width: 100%;
-    }
-
-    .form-group {
-        width: 100%;
     }
 
     .hero-form-button {
@@ -276,7 +292,8 @@
         grid-area: form;
         margin-top: -1000px;
         z-index: 2;
-        width: 342px;
+        width: 393px;
+        height: 356px;
     }
 
     .animated-images {

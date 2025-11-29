@@ -49,9 +49,12 @@
 .header-contacts{
     font-weight: 500;
     width: 472px;
-    gap: 8px;
+    gap: 32px;
     display: flex;
     align-items: center;
+    font-family: "SF-Pro-Text";
+    font-weight: 500;
+    font-size: 14px;
 }
 
 .header-contacts-phone,
@@ -67,9 +70,6 @@
 }
 
 .header-contacts p{
-    font-family: "SF-Pro-Text";
-    font-weight: 500;
-    font-size: 14px;
     line-height: 18px;
     letter-spacing: -0.15px;
     color: rgba(45, 102, 238, 1);
