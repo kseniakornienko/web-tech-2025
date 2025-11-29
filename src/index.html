@@ -149,6 +149,7 @@
                 <h2>I-teka</h2>
                 <p class="description-desktop">The application is designed to search for drugs by availability in pharmacies in cities.<br>During quarantine, the application helped many people,<br>which gives more value.</p>
                 <p class="description-tablet">The application is designed to search for drugs by availability in<br>pharmacies in cities. During quarantine, the application helped many<br>people, which gives more value.</p>
+                <p class="description-mobile">The application is designed to search for drugs by availability<br>in pharmacies in cities. During quarantine, the application<br>helped many people, which gives more value.</p>
                 <p class="categories">Business analysis <span>/</span> iOS <span>/</span> Android <span>/</span> QA <span>/</span> UI/UX Design</p>
                 <div class="info">
                     <div class="info-card">
@@ -180,13 +181,22 @@
     </section>
     <section class="discuss-project">
         <div class="discuss-left">
-            <h2>Let's discuss your project</h2>
-            <p>Let's figure out...</p>
+            <h2>Let's discuss<br>Your project</h2>
+            <p class="discuss-left-description-desktop">Let's figure out how to create an effective application,<br>its cost and terms of its development</p>
+            <p class="discuss-left-description-tablet">Let's figure out how to create an effective<br>application, its cost and terms of its development</p>
         </div>
         <form class="discuss-form">
-            <label><input type="tel" placeholder="+7 (702) 517-11-98">Best phone number</label>
-            <label><input type="text" placeholder="Иван Иванов">Full name</label>
-            <button type="submit">Discuss the project</button>
+            <div class="discuss-form-group">
+                <div class="form-group">
+                    <label for="phone">Best phone number</label>
+                    <input type="tel" id="phone" placeholder="+7 (702) 517-11-98">
+                </div>
+                <div class="form-group">
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" placeholder="Иван Иванов">
+                </div>
+            </div>
+            <button type="submit" class="discuss-form-button">Discuss the project</button>
         </form>
     </section>
     <hr>

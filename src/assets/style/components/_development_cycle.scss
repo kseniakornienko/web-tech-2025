@@ -113,6 +113,7 @@
 @media screen and (max-width: 768px) {
 
     .development-cycle{
+        max-width: 768px;
         grid-template-columns: 321px auto;
          grid-template-areas: 
             "header header"
@@ -147,9 +148,10 @@
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 525px) {
     
     .development-cycle {
+        max-width: 425px;
         grid-template-columns: 1fr;
         grid-template-areas: 
             "header"

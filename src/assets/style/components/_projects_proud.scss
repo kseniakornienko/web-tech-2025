@@ -177,10 +177,13 @@
     display: none;
 }
 
+.description-mobile{
+    display: none;
+}
+
 @media screen and (max-width: 768px){
     .projects-proud {
         padding: 32px 32px;
-        max-width: 768px;
     }
 
     .projects-list-container {
@@ -260,9 +263,10 @@
     }
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 525px){
 
     .projects-grid {
+        max-width: 425px;
         grid-template-columns: 1fr;
         grid-template-areas: 
             "list-button"
@@ -273,6 +277,7 @@
 
     .projects-proud {
         max-width: 425px;
+        padding: 32px 16px;
     }
 
     .header-description-desktop{
@@ -306,5 +311,20 @@
     .view-more-btn {
         grid-area: button;
         justify-self: center;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .description-tablet {
+        display: none;
+    }
+
+    .description-mobile {
+        display: block;
+        width: 459px;
+        font-family: "SF-Pro-Text";
+        font-weight: 400;
+        font-size: 14px;
+        margin-bottom: 40px;
     }
 }

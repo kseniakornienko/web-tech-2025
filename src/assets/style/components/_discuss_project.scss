@@ -1,0 +1,135 @@
+.discuss-project{
+    background-image: 
+        url("/src/assets/img/noise.png"), 
+        url("/src/assets/img/Frame 108.png");
+    background-position: center, center;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, contain;
+    background-color: rgba(45, 102, 238, 1);
+    height: auto;
+    padding: 80px 108px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.discuss-left{
+    color: white;
+    gap: 24px;
+}
+
+.discuss-left h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 144%;
+}
+
+.discuss-left-description-desktop {
+    font-family: "SF-Pro-Text";
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.discuss-left-description-tablet {
+    display: none;
+}
+
+.discuss-form {
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 190px;
+    gap: 32px;
+    border-radius: 12px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16), 
+                0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+    justify-content: space-evenly;
+    box-sizing: border-box;
+}
+
+.discuss-form-group {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.discuss-form-button {
+    text-align: left;
+    width: 178px;
+    height: 40px;
+    gap: 8px;
+    border-radius: 8px;
+    padding: 11px 24px;
+    background: rgba(45, 102, 238, 1);
+    font-family: "SF-Pro-Text";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.15px;
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    align-self: flex-end;
+}
+
+@media screen and (max-width: 768px){
+
+    .discuss-project {
+        max-width: 768px;
+        padding: 32px 32px;
+        flex-direction: column;
+        align-items: start;
+        background-size: auto, 95%;
+    }
+
+    .discuss-left h2 {
+        font-size: 28px;
+        line-height: 144%;
+    }
+
+    .discuss-left-description-desktop {
+        display: none;
+    }
+
+    .discuss-left-description-tablet {
+        display: block;
+        font-family: "SF-Pro-Text";
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 525px){
+
+    .discuss-project {
+        max-width: 425px;
+        background-size: auto, 95%;
+        background-position: center, center top 40%;
+        padding: 32px 16px;
+    }
+
+    .discuss-form {
+        width: 393px;
+        height: 300px;
+        margin-top: 100px;
+        align-self: center;
+    }
+
+    .discuss-form-button {
+        text-align: center;
+        align-self: center;
+        width: 255px;
+    }
+
+    .discuss-form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+}

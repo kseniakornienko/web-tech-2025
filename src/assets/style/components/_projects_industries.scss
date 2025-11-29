@@ -83,7 +83,12 @@
     .industry-element:nth-child(14) { order: 15; grid-column: 2; }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 525px) {
+
+    .projects-industries{
+        max-width: 425px;
+        padding: 32px 16px;
+    }
 
     .industry-element {
         font-size: 14px;
