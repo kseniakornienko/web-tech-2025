@@ -889,7 +889,7 @@
     grid-column: 2;
   }
 }
-@media screen and (max-width: 525px) {
+@media screen and (max-width: 425px) {
   .industry-element {
     font-size: 14px;
   }
@@ -1143,7 +1143,7 @@
     display: none;
   }
 }
-@media screen and (max-width: 525px) {
+@media screen and (max-width: 425px) {
   .projects-grid {
     grid-template-columns: 1fr;
     grid-template-areas: "list-button" "image" "card" "button";
