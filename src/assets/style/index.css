@@ -1444,6 +1444,12 @@
     width: 680px;
     height: 172px;
   }
+  .stage-card-analysis p {
+    width: 504px;
+  }
+  .stage-card p {
+    width: 432px;
+  }
 }
 @media screen and (max-width: 525px) {
   .development-stages {
@@ -1458,6 +1464,12 @@
   .stage-card {
     width: 393px;
     height: 217px;
+  }
+  .stage-card-analysis p {
+    width: 266px;
+  }
+  .stage-card p {
+    width: 231px;
   }
 }
 .our-team {
