@@ -280,14 +280,23 @@
         </div>
         <img src="assets/img/Group 625868.png" class="our-team-img-desktop">
     </section>
-    <hr>
     <section class="get-book">
-        <h2>Get the book for free by leaving your contacts.</h2>
+        <h2>Get the book for free by leaving your contacts</h2>
             <form class="book-form">
-                <label><input type="tel" placeholder="+7 (111) 111-11-11">Phone number</label>
-                <input type="text" placeholder="Your full name">
-                <label><input type="email" placeholder="mail@mail.com">email</label>
-                <button type="submit">Send me ebook to my email</button>
+                <div class="book-form-group">
+                    <div class="form-group">
+                        <label for="telephone">Phone number</label>
+                        <input type="tel" id="telephone" placeholder="+7 (111) 111-11-11" class="small-input">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your full name" class="small-input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mail">email</label>
+                    <input type="email" id="mail" placeholder="mail@mail.com" class="big-input">
+                </div>
+                <button type="submit" class="book-form-button">Send me ebook to my mail</button>
             </form>
         <img src="">
     </section>
