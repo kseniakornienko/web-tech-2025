@@ -1,0 +1,148 @@
+.faq {
+    height: auto;
+    padding: 80px 108px;
+}
+
+.faq-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "cost-guarantee development"
+        ". idea";
+    gap: 0px;
+}
+
+.faq-cost-guarantee {
+    grid-area: cost-guarantee;
+}
+
+.faq-development {
+    grid-area: development;
+}
+
+.faq-idea {
+    grid-area: idea;
+}
+
+.faq h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    grid-column: 1;
+}
+
+.faq-item-open h3,
+.faq-item h3 {
+    font-family: "SF-Pro-Display";
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.faq-item-open p,
+.faq-item p {
+    font-family: "SF-Pro-Text";
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.faq-item-open p {
+    width: 524px;
+}
+
+.faq-item {
+    width: 600px;
+    height: 116px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 0.5px solid rgba(208, 213, 221, 1);
+}
+
+.faq-item:first-child {
+    border-top: 0.5px solid rgba(208, 213, 221, 1);
+}
+
+.faq-item-open {
+    width: 600px;
+    height: 304px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: 0.5px solid rgba(208, 213, 221, 1);
+}
+
+.faq-item-img {
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+}
+
+.faq-item-open-months {
+    font-weight: 500;
+}
+
+.faq-item-open-img {
+    align-self: start;
+}
+
+.faq-idea-dublicate {
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+
+    .faq{
+        max-width: 768px;
+        padding: 10px 40px;
+    }
+
+    .faq h2 {
+        font-size: 28px;
+    }
+
+    .faq-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "development"
+            "idea"
+            "cost-guarantee";
+        padding: 10px 51px;
+    }
+}
+
+@media screen and (max-width: 525px){
+
+    .faq {
+        max-width: 425px;
+        padding: 32px 16px;
+    }
+
+    .faq-container {
+        padding: 0;
+    }
+
+    .faq-cost-guarantee {
+        display: none;
+    }
+
+    .faq-item,
+    .faq-item-open {
+        width: 393px;
+    }
+
+    .faq-item-open {
+        border-top: none;
+    }
+
+    .faq-item-open p {
+        width: 344px;
+    }
+
+    .faq-idea-dublicate {
+        display: block;
+    }
+
+    .faq-idea-dublicate .faq-item{
+        border-top: none;
+    }
+}
