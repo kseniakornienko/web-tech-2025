@@ -1,56 +1,65 @@
-.hero{
+.hero {
     background: rgba(242, 244, 247, 1);
     height: 900px;
-    height: 900px;
     margin: 0;
-    padding: 0;
+    padding: 0 108px 0 108px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: 
+        "text image"
+        "form image"
+        ". image";
+    align-items: start;
+    gap: 0;
+    overflow: hidden;
 }
 
-.hero-text{
-    position: absolute;
+.hero-text {
+    grid-area: text;
+    align-self: end;
     width: 600px;
-    top: 160px;
-    left: 108px;
+    margin-top: 160px;
     gap: 24px;
-    z-index: 1;
 }
 
-.hero-text h2{
+.hero-text h2 {
     font-family: "Inter", sans-serif;
     font-weight: 700;
     font-size: 36px;
     margin-top: 0;
+    margin-bottom: 24px;
+    line-height: 144%;
 }
 
-.hero-text span{
+.hero-text span {
     color: rgba(45, 102, 238, 1);
 }
 
-.hero-text p{
+.hero-text p {
     font-family: "SF-Pro-Text";
     font-weight: 500;
     font-size: 15px;
+    margin: 0;
 }
 
-.hero-form{
-    position: absolute;
+.hero-form {
+    grid-area: form;
     display: flex;
     flex-direction: column;
     width: 676px;
     height: 186px;
-    top: 430px;
-    left: 108px;
+    margin-top: 46px;
     gap: 32px;
     border-radius: 12px;
-    padding-top: 24px;
-    padding-left: 24px;
+    padding: 24px;
     background: rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16);
-    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
-    z-index: 1;
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16), 
+                0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
 }
 
-.hero-form h5{
+.hero-form-header-desktop {
     width: 600px;
     margin: 0;
     font-family: "Inter";
@@ -61,7 +70,7 @@
     color: rgba(16, 24, 40, 1);
 }
 
-.hero-form form{
+.hero-form form {
     display: flex;
     flex-direction: row;
     width: 628px; 
@@ -69,21 +78,24 @@
     gap: 24px;
 }
 
-.form-group{
-    width: 224px;
-    height: 54px;
+.form-group {
+    width: 264px;
+    min-height: 54px;
     gap: 8px;
     font-family: "SF-Pro-Text";
     font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-.form-group label{
+.form-group label {
     color: rgba(102, 112, 133, 1);
     font-size: 13px;
     line-height: 16px;
 }
 
-.form-group input{
+.form-group input {
     height: 38px;
     color: rgba(16, 24, 40, 1);
     font-family: "SF-Pro-Text";
@@ -93,16 +105,13 @@
     padding: 0;
 }
 
-.hero-form-button{
+.hero-form-button {
     text-align: left;
     width: 132px;
     height: 58px;
     gap: 8px;
     border-radius: 8px;
-    padding-top: 11px;
-    padding-right: 24px;
-    padding-bottom: 11px;
-    padding-left: 24px;
+    padding: 11px 24px;
     background: rgba(45, 102, 238, 1);
     font-family: "SF-Pro-Text";
     font-weight: 500;
