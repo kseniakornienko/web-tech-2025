@@ -5,7 +5,6 @@ if (document.readyState === 'loading') {
 }
 
 function init() {
-    // Данные для меню согласно описанию
     const data = {
         name: 'Каталог товаров',
         hasChildren: true,
@@ -94,20 +93,16 @@ function init() {
         ]
     };
 
-    // Создаем экземпляр ListItems и инициализируем его
     const items = new ListItems(document.getElementById('list-items'), data);
     items.render();
     items.init();
 }
 
-// Конструктор для создания меню
 function ListItems(el, data) {
     this.el = el;
     this.data = data;
 
-    // Инициализация обработчиков событий с использованием всплытия
     this.init = function() {
-        // Используем всплытие событий - вешаем один обработчик на контейнер
         this.el.addEventListener('click', (event) => {
             const arrow = event.target.closest('.list-item__arrow');
             if (arrow) {
@@ -117,7 +112,6 @@ function ListItems(el, data) {
                 }
             }
             
-            // Также добавляем возможность клика по всей строке
             const inner = event.target.closest('.list-item__inner');
             if (inner) {
                 const parentItem = inner.closest('[data-parent]');
@@ -128,12 +122,10 @@ function ListItems(el, data) {
         });
     };
 
-    // Основной метод рендеринга
     this.render = function() {
         this.el.innerHTML = this.renderItem(this.data);
     };
 
-    // Рекурсивный метод рендеринга элементов
     this.renderItem = function(itemData) {
         const hasChildren = itemData.hasChildren && itemData.items && itemData.items.length > 0;
         
@@ -146,11 +138,9 @@ function ListItems(el, data) {
             itemsHtml += '</div>';
         }
 
-        // Определяем классы в зависимости от наличия детей
         const itemClass = hasChildren ? 'list-item list-item_open' : 'list-item';
         const parentAttr = hasChildren ? 'data-parent' : '';
         
-        // Стрелка показывается только если есть дети
         const arrowHtml = hasChildren ? 
             '<img class="list-item__arrow" src="img/chevron-down.png" alt="chevron-down">' : 
             '<div class="list-item__arrow" style="visibility: hidden; width: 1em;"></div>';
@@ -167,7 +157,6 @@ function ListItems(el, data) {
         `;
     };
 
-    // Переключение состояния (раскрыть/свернуть)
     this.toggleItems = function(parent) {
         parent.classList.toggle('list-item_open');
     };
