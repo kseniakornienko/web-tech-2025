@@ -1,10 +1,11 @@
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init)
+    document.addEventListener('DOMContentLoaded', init);
 } else {
-    init()
+    init();
 }
 
 function init() {
+    // Данные для меню согласно описанию
     const data = {
         name: 'Каталог товаров',
         hasChildren: true,
@@ -14,111 +15,160 @@ function init() {
                 hasChildren: true,
                 items: [
                     {
-                        name: 'Ulgran1',
+                        name: 'Ulgran',
                         hasChildren: true,
                         items: [
                             {
-                                name: 'SMT1',
+                                name: 'Smth',
                                 hasChildren: false,
                                 items: []
                             },
                             {
-                                name: 'SMT2',
+                                name: 'Smth',
                                 hasChildren: false,
                                 items: []
                             }
                         ]
                     },
+
                     {
-                        name: 'Ulgran2',
+                        name: 'Vigro Mramor',
+                        hasChildren: false,
+                        items: []
+                    },
+
+                    {
+                        name: 'Handmade',
                         hasChildren: true,
                         items: [
                             {
-                                name: 'SMT3',
+                                name: 'Smth',
                                 hasChildren: false,
                                 items: []
                             },
                             {
-                                name: 'SMT4',
+                                name: 'Smth',
                                 hasChildren: false,
                                 items: []
                             }
                         ]
+                    },
+
+                    {
+                        name: 'Vigro Glass',
+                        hasChildren: false,
+                        items: []
                     }
                 ]
-            },{
+            },
+
+            {
                 name: 'Фильтры',
                 hasChildren: true,
                 items: [
                     {
-                        name: 'Ulgran3',
+                        name: 'Ulgran',
                         hasChildren: true,
                         items: [
                             {
-                                name: 'SMT5',
+                                name: 'Smth',
                                 hasChildren: false,
                                 items: []
                             },
+
                             {
-                                name: 'SMT6',
+                                name: 'Smth',
                                 hasChildren: false,
                                 items: []
                             }
                         ]
+                    },
+
+                    {
+                        name: 'Vigro Mramor',
+                        hasChildren: false,
+                        items: []
                     }
                 ]
             }
         ]
-    }
+    };
 
+    // Создаем экземпляр ListItems и инициализируем его
+    const items = new ListItems(document.getElementById('list-items'), data);
+    items.render();
+    items.init();
+}
 
-    const items = new ListItems(document.getElementById('list-items'), data)
+// Конструктор для создания меню
+function ListItems(el, data) {
+    this.el = el;
+    this.data = data;
 
+    // Инициализация обработчиков событий с использованием всплытия
+    this.init = function() {
+        // Используем всплытие событий - вешаем один обработчик на контейнер
+        this.el.addEventListener('click', (event) => {
+            const arrow = event.target.closest('.list-item__arrow');
+            if (arrow) {
+                const parentItem = arrow.closest('[data-parent]');
+                if (parentItem) {
+                    this.toggleItems(parentItem);
+                }
+            }
+            
+            // Также добавляем возможность клика по всей строке
+            const inner = event.target.closest('.list-item__inner');
+            if (inner) {
+                const parentItem = inner.closest('[data-parent]');
+                if (parentItem) {
+                    this.toggleItems(parentItem);
+                }
+            }
+        });
+    };
 
-  /*  items.render()*/
-    items.init()
+    // Основной метод рендеринга
+    this.render = function() {
+        this.el.innerHTML = this.renderItem(this.data);
+    };
 
-    /*console.log(items.renderTest(data));*/
-
-    function ListItems(el, data) {
-        this.el = el;
-        this.data = data;
-
-        this.init = function () {
-            const parents = this.el.querySelectorAll('[data-parent]')
-
-            parents.forEach(parent => {
-                const open = parent.querySelector('[data-open]')
-
-                open.addEventListener('click', () => this.toggleItems(parent) )
-            })
+    // Рекурсивный метод рендеринга элементов
+    this.renderItem = function(itemData) {
+        const hasChildren = itemData.hasChildren && itemData.items && itemData.items.length > 0;
+        
+        let itemsHtml = '';
+        if (hasChildren) {
+            itemsHtml = '<div class="list-item__items">';
+            itemData.items.forEach(child => {
+                itemsHtml += this.renderItem(child);
+            });
+            itemsHtml += '</div>';
         }
 
-        this.render = function () {
-            this.el.insertAdjacentHTML('beforeend', this.renderParent(this.data))
-        }
+        // Определяем классы в зависимости от наличия детей
+        const itemClass = hasChildren ? 'list-item list-item_open' : 'list-item';
+        const parentAttr = hasChildren ? 'data-parent' : '';
+        
+        // Стрелка показывается только если есть дети
+        const arrowHtml = hasChildren ? 
+            '<img class="list-item__arrow" src="img/chevron-down.png" alt="chevron-down">' : 
+            '<div class="list-item__arrow" style="visibility: hidden; width: 1em;"></div>';
+        
+        return `
+            <div class="${itemClass}" ${parentAttr}>
+                <div class="list-item__inner">
+                    ${arrowHtml}
+                    <img class="list-item__folder" src="img/folder.png" alt="folder">
+                    <span>${itemData.name}</span>
+                </div>
+                ${itemsHtml}
+            </div>
+        `;
+    };
 
-        this.renderParent = function (data) {
-            //проверка всех элементов на hasChildren
-            //если hasChildren, то запускаем renderParent
-            //если !hasChildren, то запускаем renderChildren
-            //возвращает рендер родительского элемента
-
-        }
-
-        this.renderChildren = function (data) {
-            //вовзращает рендер элемента без вложенности
-        }
-
-        this.toggleItems = function (parent) {
-            parent.classList.toggle('list-item_open')
-        }
-
-/*        this.renderTest = function (data) {
-            return `
-            <div class="test">${data.name}</div>
-            `
-        }*/
-    }
-
+    // Переключение состояния (раскрыть/свернуть)
+    this.toggleItems = function(parent) {
+        parent.classList.toggle('list-item_open');
+    };
 }
